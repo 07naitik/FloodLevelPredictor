@@ -43,8 +43,12 @@ function App() {
 
   return (
     <> 
-    <p className='desc'>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    <h1 style={{ fontFamily: 'Garamond, serif' }}>Flood Level Predictor</h1>
+    <p style={{ fontFamily: 'Helvetica, sans-serif' }}>
+        Flood Level Predictor will take in input of flood level of each road. Some roads will have missing flood level data. This value is predicted using a combination of 2 methods - <br />
+        1. Training GNN on flood level data of previous days to predict missing values in the future <br />
+        2. Using inverse distance weighting method to predict missing values of a day by inversely weighting the flood levels of other roads by its distance from current road<br />
+        We have used the beautiful city of Vasco, Goa to simulate our program.
     </p>
     <img src="src\assets\hackenzahirez.png" alt="img1" className='image1'/>
       <form onSubmit={handleSubmit}>
