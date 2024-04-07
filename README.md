@@ -17,5 +17,5 @@ We have used **TISER-GCN**, a Neural Network architecture that integrates **temp
 ### ➕ Ensemble of the above algorithms to predict the final water level:
 From our observations, the spatial prediction (by the IDW algorithm) has a better correlation with the actual water level compared to the temporal prediction (by the GCN). Hence, our final water level prediction is given by the formula `0.8*(spatial prediction) + 0.2*(temporal prediction)`, i.e. giving 80% weightage to the output from the IDW algorithm and 20% weightage to the output from the GCN. 
 
-### 🗺️ MAP PLOTTING USING MATPLOTLIB :
+### 🗺️ Map Plotting Using MatPlotLib :
 The coordinates of each intersection point were found and stored as a tuple in the `nodes` list. These were then labelled according to index and plotted on the image map. Another list of tuples `edges` stored the pair of indices of the 2 nodes forming a road. The roads are coloured in a shade of blue. The intensity of the shade is directly proportional to height of water level. Road with missing data is initially coloured in red. Once final water levels are retrieved the red coloured road is coloured in **appropriate shade of blue** (lighter means less flooded, darker means more flooded)
