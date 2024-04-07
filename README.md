@@ -1,6 +1,7 @@
 # A Tool to Predict the Flood Water Level on a Road
 ## Using the water level data of all the roads in the city, as well as past data
 Made as a part of Hackenza Hackathon, conducted by ASCII BITS Goa (Computer Science Department)
+Watch this video to understand how it works: https://screenapp.io/app/#/shared/990cde30-eb2f-4639-9f0b-771005ada54d
 
 ### ❓ Missing Data Imputation:
 The problem of estimation of accurate water level values for missing data is divided into two parts : spatial and time-series. For estimating data using spatial-analysis, we have used the method of **inverse distance weighting**, and for predicting time series data, a **graph convolutional network** is implemented. Finally, an ensemble of the predictions by the 2 methods is taken to give the most accurate estimate possible for missing water levels.
@@ -19,3 +20,6 @@ From our observations, the spatial prediction (by the IDW algorithm) has a bette
 
 ### 🗺️ Map Plotting Using MatPlotLib :
 The coordinates of each intersection point were found and stored as a tuple in the `nodes` list. These were then labelled according to index and plotted on the image map. Another list of tuples `edges` stored the pair of indices of the 2 nodes forming a road. The roads are coloured in a shade of blue. The intensity of the shade is directly proportional to height of water level. Road with missing data is initially coloured in red. Once final water levels are retrieved the red coloured road is coloured in **appropriate shade of blue** (lighter means less flooded, darker means more flooded)
+
+
+That's all :) Have a good day!
