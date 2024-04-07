@@ -18,6 +18,7 @@ def generate_plot(waterr_levels_data):
     import numpy as np
     import os
     import time
+    import csv
 
     img = mpimg.imread('hackenzahirez.png')
 
@@ -260,6 +261,12 @@ def generate_plot(waterr_levels_data):
     # Assuming 'img' is your background image, make sure you have it defined somewhere in your code
 
     water_levels = complete_water_levels
+    
+    def download_list_as_csv(data, filename):
+        with open(filename, 'w', newline='') as csvfile:
+            csv_writer = csv.writer(csvfile)
+            csv_writer.writerow(data)
+    download_list_as_csv(water_levels, "complete_data.csv")
     # Function to draw nodes
     def draw_nodes(ax, nodes):
         cnt = 0
