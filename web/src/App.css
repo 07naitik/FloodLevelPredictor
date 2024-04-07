@@ -1,0 +1,37 @@
+/* Centering everything within body */
+body {
+  text-align: center;
+  background-color: #CACAAA;
+}
+
+/* Optionally, you can also center specific elements individually */
+.container {
+  display: inline-block;
+  /* You can add more styling to .container if needed */
+}
+
+.text-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 250px;
+  margin-top: 20px;
+}
+
+.image1{
+  width: 45%;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: #007bff; /* change color as desired */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* change shadow as desired */
+}
+
+.desc{
+  text-align: center;
+  font-weight: bold;
+  margin-left: 20%;
+  margin-right: 20%
+}
